@@ -1,4 +1,4 @@
-SELECT *
-FROM PERSONS
-WHERE age > 27
-ORDER BY age DESC;
+SELECT DISTINCT products.product_name
+FROM products
+JOIN customers ON products.customer_id = customers.customer_id
+WHERE LOWER(customers.name) LIKE LOWER('%alexey%');
